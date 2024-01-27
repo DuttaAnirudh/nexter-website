@@ -1,4 +1,5 @@
 @import "abstracts/variables";
+@import "abstracts/placeholder";
 @import "abstracts/functions";
 @import "abstracts/mixins";
 
@@ -11,9 +12,11 @@
 
 @import "layouts/sidebar";
 @import "layouts/header";
+@import "layouts/features";
 @import "layouts/homes";
 @import "layouts/footer";
 
 @import "components/realtors";
+@import "components/feature";
 @import "components/story";
 @import "components/gallery";
