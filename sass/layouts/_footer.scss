@@ -1,4 +1,29 @@
 .footer {
   background-color: $color-secondary;
   grid-column: 2 / -1;
+  padding: 8rem;
+}
+
+.nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  align-items: center;
+  gap: 2rem;
+
+  &__link:link,
+  &__link:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-grey-light-1;
+    font-size: 1.4rem;
+    font-family: $font-display;
+    display: block;
+    text-align: center;
+    transition: all 0.2s;
+  }
+
+  &__link:hover {
+    color: $color-primary;
+  }
 }
