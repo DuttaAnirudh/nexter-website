@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
 
+  // 1000px
   @media only screen and (max-width: $bp-large) {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
@@ -37,6 +38,7 @@
     transform: translateY(1.3rem);
   }
 
+  // 1000px
   @media only screen and (max-width: $bp-large) {
     margin-top: 0;
     margin-right: 3rem;

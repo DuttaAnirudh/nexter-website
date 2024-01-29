@@ -28,10 +28,12 @@
     text-transform: uppercase;
   }
 
+  // 1000px
   @media only screen and (max-width: $bp-large) {
     grid-column: 8 / -1;
   }
 
+  // 800px
   @media only screen and (max-width: $bp-medium) {
     grid-column: 1 / -1;
 
@@ -40,6 +42,7 @@
     }
   }
 
+  // 600px
   @media only screen and (max-width: $bp-small) {
     &__list {
       grid-template-columns: min-content max-content;
