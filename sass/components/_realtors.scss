@@ -27,4 +27,23 @@
     margin-top: -3px;
     text-transform: uppercase;
   }
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 8 / -1;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+
+    &__list {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    &__list {
+      grid-template-columns: min-content max-content;
+      padding: 3rem 3rem 5rem;
+    }
+  }
 }

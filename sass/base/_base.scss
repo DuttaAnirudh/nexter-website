@@ -11,7 +11,11 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; // 1rem = 8px
+  }
 }
 
 .container {
@@ -20,4 +24,15 @@ html {
   grid-template-columns:
     8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem))
     minmax(6rem, 1fr);
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem))
+      minmax(6rem, 1fr);
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 6rem calc(100vh - 6rem);
+  }
 }

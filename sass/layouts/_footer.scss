@@ -2,13 +2,17 @@
   background-color: $color-secondary;
   grid-column: 2 / -1;
   padding: 8rem;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+  }
 }
 
 .nav {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  align-items: center;
+  align-items: start;
   gap: 2rem;
 
   &__link:link,
