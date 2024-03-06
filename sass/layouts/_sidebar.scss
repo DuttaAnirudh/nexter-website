@@ -4,6 +4,8 @@
 
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 1000;
 
   // 1000px
   @media only screen and (max-width: $bp-large) {
@@ -11,43 +13,5 @@
     grid-column: 1 / -1;
     justify-content: end;
     align-items: center;
-  }
-}
-
-.nav-btn {
-  border: none;
-  border-radius: 0;
-  background-color: $color-white;
-  height: 2px;
-  width: 4.5rem;
-  margin-top: 4rem;
-
-  &::before,
-  &::after {
-    content: "";
-    background-color: $color-white;
-    height: 2px;
-    width: 4.5rem;
-    display: block;
-  }
-
-  &::before {
-    transform: translateY(-1.5rem);
-  }
-  &::after {
-    transform: translateY(1.3rem);
-  }
-
-  // 1000px
-  @media only screen and (max-width: $bp-large) {
-    margin-top: 0;
-    margin-right: 3rem;
-
-    &::before {
-      transform: translateY(-1.2rem);
-    }
-    &::after {
-      transform: translateY(1rem);
-    }
   }
 }

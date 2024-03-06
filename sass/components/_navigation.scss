@@ -1,0 +1,152 @@
+//////////////////////////////////////
+//////////////////////////////////////
+/// HAMBURGER ICON
+.hamburger {
+  display: block;
+  overflow: hidden;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    height: 7rem;
+    width: 7rem;
+    position: absolute;
+    top: 1rem;
+    left: 0.5rem;
+    border-radius: 50%;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2005;
+
+    // 1000px
+    @media only screen and (max-width: $bp-large) {
+      top: -0.5rem;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      height: 2px;
+      width: 3.8rem;
+      background-color: $color-white;
+      transition: all 0.4s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    transform: translateY(-2px);
+  }
+  &__button:hover &__icon::after {
+    transform: translateY(2px);
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 1px;
+    transform: rotate(45deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 1px;
+    transform: rotate(-45deg);
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ .nav-list {
+    left: 0;
+    visibility: visible;
+  }
+}
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+/// NAVIGATION LIST
+.nav-list {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  background-color: $color-primary;
+
+  min-height: 200vh;
+  width: 40rem;
+  z-index: 2000;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 0.8s;
+
+  @media only screen and (max-width: $bp-small) {
+    width: 30rem;
+  }
+}
+
+.navigation {
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-top: 10rem;
+    padding-left: 4rem;
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  &__item {
+    background-color: $color-primary;
+    list-style: none;
+    padding: 1.8rem 0 1rem 1.5rem;
+    border-radius: 100vw 0 0 100vw;
+    transition: all 0.4s;
+
+    &:hover,
+    &:active {
+      background-color: $color-black;
+      position: relative;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    font-family: $font-display;
+    font-weight: 400;
+    margin-left: 2rem;
+    font-size: 3rem;
+    color: $color-grey-light-1;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2rem;
+    }
+  }
+}

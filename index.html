@@ -20,13 +20,39 @@
     <!-------------------------------------------------------------------->
     <!-- SIDEBAR -->
     <div class="sidebar">
-      <button class="nav-btn"></button>
+      <div class="hamburger">
+        <input type="checkbox" id="ham-toggle" class="hamburger__checkbox" />
+        <label for="ham-toggle" class="hamburger__button">
+          <span class="hamburger__icon">&nbsp;</span>
+        </label>
+
+        <nav class="nav-list">
+          <ul class="navigation__box">
+            <li class="navigation__item nav-active">
+              <a class="navigation__link" href="#realtor">Top Realtors</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#features">Features</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#reviews">Reviews</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#homes">Homes for Sale</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#gallery">Gallery</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <!-------------------------------------------------------------------->
     <!-- HEADER -->
     <header class="header">
       <img src="/assets/logo.png" alt="Nexter logo" class="header__logo" />
+
       <h3 class="heading-3">Your own home:</h3>
       <h1 class="heading-1">The ultimate personal freedom</h1>
       <button class="btn header__btn">View our properties</button>
@@ -43,7 +69,7 @@
 
     <!-------------------------------------------------------------------->
     <!-- REALTOR -->
-    <div class="realtors">
+    <div class="realtors" id="realtor">
       <h3 class="heading-3">Top 3 realtors</h3>
       <div class="realtors__list">
         <img
@@ -83,7 +109,7 @@
 
     <!-------------------------------------------------------------------->
     <!-- FEATURES SECTION -->
-    <section class="features">
+    <section class="features" id="features">
       <div class="feature">
         <svg class="feature__icon">
           <use href="assets/sprite.svg#icon-global"></use>
@@ -162,7 +188,7 @@
       <img src="/assets/story-2.jpeg" alt="New house" class="story__img--2" />
     </div>
 
-    <div class="story__content">
+    <div class="story__content" id="reviews">
       <h3 class="heading-3 mb-2">Happy Customer</h3>
       <h2 class="heading-2 heading-2--dark mb-3">
         &ldquo;The best decision of our lives&rdquo;
@@ -177,7 +203,7 @@
 
     <!-------------------------------------------------------------------->
     <!-- HOMES FOR SALE SECTION -->
-    <section class="homes">
+    <section class="homes" id="homes">
       <div class="home">
         <img src="/assets/house-1.jpeg" alt="House 1" class="home__img" />
         <svg class="home__like">
@@ -391,7 +417,7 @@
 
     <!-------------------------------------------------------------------->
     <!-- PHOTO GALLERY SECTION -->
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <figure class="gallery__item gallery__item--1">
         <img
           src="/assets/gal-1.jpeg"
@@ -529,5 +555,6 @@
 
       <p class="copyright">&copy; Nexter 2024</p>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

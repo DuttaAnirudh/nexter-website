@@ -1,6 +1,6 @@
 .homes {
   grid-column: 3 / 11;
-  margin: 15rem 0;
+  padding: 15rem 0;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
@@ -13,11 +13,11 @@
 
   // 800px
   @media only screen and (max-width: $bp-medium) {
-    margin: 10rem 0;
+    padding: 10rem 0;
   }
 
   // 600px
   @media only screen and (max-width: $bp-small) {
-    margin: 7rem 0;
+    padding: 7rem 0;
   }
 }
